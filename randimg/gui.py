@@ -2,6 +2,7 @@
 
 import sys
 import os
+import signal
 from randimg import lib as randlib 
 from PyQt4 import QtGui, QtCore
 
@@ -50,6 +51,7 @@ class MainWindow(QtGui.QWidget):
 
 
 def main():
+    signal.signal(signal.SIGINT, signal.SIG_DFL)
     app = QtGui.QApplication(sys.argv)
     window = MainWindow()
     window.resize(640, 480)
