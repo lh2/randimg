@@ -5,6 +5,26 @@ Currently, there is only a GUI version available, but a CLI could be easily made
 
 PyQt4 is required to run the GUI.
 
+##Prerequisites
+
+You will need Python version 3 and PyQt4.
+
+##Install
+
+First, clone the git repository
+
+    git clone https://github.com/lh2/randimg.git
+
+Change into the projects directory
+
+    cd randimg
+
+Run the setup script
+
+    python setup.py install
+
+Done! Now you should be able to execute `randimg-qt`.
+
 ##License
 
 Copyright (C) 2014 Lukas Henkel
