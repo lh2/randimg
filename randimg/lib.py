@@ -22,5 +22,3 @@ def get(path):
     files = _get_files(path)
     i = random.randint(0, len(files) - 1)
     return files[i]
-
-version = '0.1'

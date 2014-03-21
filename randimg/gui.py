@@ -2,7 +2,7 @@
 
 import sys
 import os
-import randimg
+from randimg import lib as randlib 
 from PyQt4 import QtGui, QtCore
 
 class MainWindow(QtGui.QWidget):
@@ -41,7 +41,7 @@ class MainWindow(QtGui.QWidget):
 
     def getRandImage(self):
         if(self.dir != None):
-            self.setImage(randimg.get(self.dir))
+            self.setImage(randlib.get(self.dir))
 
     def setImage(self, path):
         self._imagePathBox.setText(path)
@@ -49,7 +49,7 @@ class MainWindow(QtGui.QWidget):
         self._imageLabel.adjustSize()
 
 
-if __name__ == '__main__':
+def main():
     app = QtGui.QApplication(sys.argv)
     window = MainWindow()
     window.resize(640, 480)
